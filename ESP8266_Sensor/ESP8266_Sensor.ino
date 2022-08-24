@@ -28,16 +28,12 @@
 #define PIN_DHT11 14
 #define PIN_LED 2
 
-
 SimpleDHT11 dht11(PIN_DHT11);
-
-
 
 void setup() {
   Serial.begin(115200);
   EEPROM.begin(350);
   wifi_load();
-
   pinMode(PIN_LED, OUTPUT); //设置板载LED灯
 
 //  homekit_storage_reset(); // to remove the previous HomeKit pairing storage when you first run this new HomeKit example
